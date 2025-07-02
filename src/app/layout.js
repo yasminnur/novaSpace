@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <>
       <html lang="en" className={`${inter.variable} ${serif.variable}`}>
-        <body className="relative bg-primary px-7 py-7 h-screen">
+        <body className="relative bg-primary px-5 lg:px-7 py-7 min-w-[360px] max-w-[1580px] mx-auto">
             <Navbar />
             <div>
               {children}

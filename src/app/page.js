@@ -22,17 +22,17 @@ export default function Home() {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="rounded-[60px] flex flex-col justify-center items-center md:rounded-[45px] min-h-screen h-fit overflow-x-hidden py-[283px] px-[128px]"
+          className="rounded-[45px] lg:rounded-[60px] flex flex-col justify-center items-center min-h-screen h-fit overflow-x-hidden py-[200px] px-[100px] lg:py-[283px] lg:px-[128px]"
         >
           <div className="flex flex-col justify-center items-center text-white font-normal uppercase leading-none">
-            <h1 className="text-[120px] font-[var(--font-inter)]">
+            <h1 className="text-[80px] lg:text-[120px] font-[var(--font-inter)]">
               Work
               <span className="italic font-[var(--font-serif)]">
                 {" "}
                 Smarter,{" "}
               </span>
             </h1>
-            <h1 className="text-[120px]">
+            <h1 className="lg:text-[120px]">
               <span className="italic font-[Instrument Serif]">InNovate</span>{" "}
               faster
             </h1>
