@@ -1,14 +1,20 @@
 "use client";
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import typeroomData from "@/data/typeroom.json";
+// import Navbar from "@/components/navbar/page";
 export default function Home() {
   const pathname = usePathname();
   const [selected, setSelected] = useState("alpha");
+  const [jsonData, setJsonData] = useState([]);
+  useEffect(() => {
+    setJsonData(typeroomData);
+  }, []);
   return (
     <>
-      <div id="about" className="flex flex-col gap-y-[30px]">
+      <div id="about" className="flex flex-col">
         <section
           style={{
             backgroundImage: "url(/assets/img/img-section1.svg)",
@@ -50,9 +56,11 @@ export default function Home() {
         </section>
         <section
           id="location"
-          className="py-[100px] px-10 rounded-t-[60px] bg-white "
+          className="mt-[30px] py-[100px] px-10 rounded-t-[60px] bg-white "
         >
-          <h1 className="text-center font-normal text-[45px] text-[#191919]">Location</h1>
+          <h1 className="text-center font-normal text-[45px] text-[#191919]">
+            Location
+          </h1>
           <div className="nav-location mt-[50px] text-[28px]">
             <ul className="flex gap-x-5">
               <li
@@ -61,7 +69,9 @@ export default function Home() {
                 <button
                   onClick={() => setSelected("alpha")}
                   className={`flex-1 text-center rounded-2xl w-full py-5 ${
-                    selected === "alpha" ? "bg-[#191919] text-white font-medium" : "bg-[#F8F8F8] text-[#191919] font-normal"
+                    selected === "alpha"
+                      ? "bg-[#191919] text-white font-medium"
+                      : "bg-[#F8F8F8] text-[#191919] font-normal"
                   }`}
                 >
                   Alpha District
@@ -73,7 +83,9 @@ export default function Home() {
                 <button
                   onClick={() => setSelected("beta")}
                   className={`flex-1 text-center rounded-2xl w-full py-5 ${
-                    selected === "beta" ? "bg-[#191919] text-white font-medium" : "bg-[#F8F8F8] text-[#191919] font-normal"
+                    selected === "beta"
+                      ? "bg-[#191919] text-white font-medium"
+                      : "bg-[#F8F8F8] text-[#191919] font-normal"
                   }`}
                 >
                   Beta District
@@ -85,7 +97,9 @@ export default function Home() {
                 <button
                   onClick={() => setSelected("omega")}
                   className={`flex-1 text-center rounded-2xl w-full py-5 ${
-                    selected === "omega" ? "bg-[#191919] text-white font-medium" : "bg-[#F8F8F8] text-[#191919] font-normal"
+                    selected === "omega"
+                      ? "bg-[#191919] text-white font-medium"
+                      : "bg-[#F8F8F8] text-[#191919] font-normal"
                   }`}
                 >
                   Omega District
@@ -97,47 +111,219 @@ export default function Home() {
           <div className="relative h-[581px] w-full mt-[30px] rounded-[60px] overflow-hidden">
             {selected === "alpha" && (
               <>
-                 <Image
+                <Image
                   src={"/assets/img/img-section1.svg"}
                   fill
                   className="absolute inset-0 object-cover w-full h-full"
-                  ></Image>
+                ></Image>
                 <div className="desc-location text-base text-start font-normal text-[#191919] absolute z-20 left-10 top-10 p-[30px] bg-[#F8F8F8] h-[108px] w-[375px] rounded-3xl ">
-              <p className="truncate">📍 Futurix Tower, 15th Floor</p>
-              <p className="truncate">Jl. Quantum Avenue No. 56, Alpha District</p>
-            </div>
+                  <p className="truncate">📍 Futurix Tower, 15th Floor</p>
+                  <p className="truncate">
+                    Jl. Quantum Avenue No. 56, Alpha District
+                  </p>
+                </div>
               </>
             )}
             {selected === "beta" && (
-               <>
-               <Image
-                src={"/assets/img/img-section1.svg"}
-                fill
-                className="absolute inset-0 object-cover w-full h-full"
+              <>
+                <Image
+                  src={"/assets/img/img-section1.svg"}
+                  fill
+                  className="absolute inset-0 object-cover w-full h-full"
                 ></Image>
-              <div className="desc-location text-base text-start font-normal text-[#191919] absolute z-20 left-10 top-10 p-[30px] bg-[#F8F8F8] h-[108px] w-[375px] rounded-3xl ">
-            <p className="truncate">📍 Futurix Tower, 15th Floor</p>
-            <p className="truncate">Jl. Quantum Avenue No. 56, Beta District</p>
-          </div>
-            </>
+                <div className="desc-location text-base text-start font-normal text-[#191919] absolute z-20 left-10 top-10 p-[30px] bg-[#F8F8F8] h-[108px] w-[375px] rounded-3xl ">
+                  <p className="truncate">📍 Futurix Tower, 15th Floor</p>
+                  <p className="truncate">
+                    Jl. Quantum Avenue No. 56, Beta District
+                  </p>
+                </div>
+              </>
             )}
             {selected === "omega" && (
-               <>
-               <Image
-                src={"/assets/img/img-section1.svg"}
-                fill
-                className="absolute inset-0 object-cover w-full h-full"
+              <>
+                <Image
+                  src={"/assets/img/img-section1.svg"}
+                  fill
+                  className="absolute inset-0 object-cover w-full h-full"
                 ></Image>
-              <div className="desc-location text-base text-start font-normal text-[#191919] absolute z-20 left-10 top-10 p-[30px] bg-[#F8F8F8] h-[108px] w-[375px] rounded-3xl ">
-            <p className="truncate">📍 Futurix Tower, 15th Floor</p>
-            <p className="truncate">Jl. Quantum Avenue No. 56, Omega District</p>
-          </div>
-            </>
+                <div className="desc-location text-base text-start font-normal text-[#191919] absolute z-20 left-10 top-10 p-[30px] bg-[#F8F8F8] h-[108px] w-[375px] rounded-3xl ">
+                  <p className="truncate">📍 Futurix Tower, 15th Floor</p>
+                  <p className="truncate">
+                    Jl. Quantum Avenue No. 56, Omega District
+                  </p>
+                </div>
+              </>
             )}
           </div>
         </section>
-        <section>
-          
+        <section className="bg-white px-10 py-[100px]">
+          <h1 className="text-center font-normal text-[45px] text-[#191919]">
+            Room Type
+          </h1>
+          <div className="flex flex-col gap-y-[50px] mt-[60px]">
+            {jsonData.map((item, index) => (
+              <>
+                <div
+                  key={index}
+                  className="room1 relative w-full h-[900px] overflow-hidden rounded-[60px]"
+                  style={{
+                    backgroundImage: `url(${item.image})`,
+                    backgroundSize: "cover",
+                    backgroundPosition: "center",
+                    backgroundRepeat: "no-repeat",
+                  }}
+                >
+                  <div className="overlay inset-0 z-10 absolute w-full h-full bg-gradient-to-t from-black/75 to-black/0"></div>
+                  {/* <Image src={"/assets/img/img-section1.svg"} fill className="object-cover"></Image> */}
+                  <div className="absolute z-20 px-[88px] bottom-[131px] text-white flex w-full justify-between ">
+                    <div className="kiri flex flex-col gap-y-[10px] w-[615px]">
+                      <p className="px-5 py-2 rounded-full bg-white/40 w-fit">
+                        {item.capasity} people
+                      </p>
+                      <h1 className="italic text-[100px] uppercase font-[var(--font-serif)] leading-none">
+                        {item.name1}
+                        <span className="font-[var(--font-inter)] not-italic">
+                          {item.name2}
+                        </span>
+                      </h1>
+                      <p className="font-normal text-[25px] pr-[20px]">
+                        {item.desc}
+                      </p>
+                    </div>
+                    <div className="kanan flex justify-end items-end">
+                      <div className="group flex items-center gap-x-5">
+                        <Link
+                          href="#"
+                          className="font-normal text-xl text-white group-hover:underline"
+                        >
+                          BOOK NOW
+                        </Link>
+                        <div className="flex items-center justify-center rounded-full border w-[50px] h-[50px] border-white relative overflow-hidden bg-white/10">
+                          <Image
+                            src="/assets/icon/icon-arrow.svg"
+                            fill
+                            className="p-3 group-hover:-rotate-[0.542rad]"
+                          ></Image>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </>
+            ))}
+          </div>
+        </section>
+        <section className="bg-white px-10 py-[100px]">
+          <h1 className="text-center font-normal text-[45px] text-[#191919]">
+            Facilities
+          </h1>
+          <div className="mt-[60px] grid grid-cols-3 gap-7">
+            <div className="h-[258px] flex flex-col justify-center items-center rounded-[40px] px-[150px] py-[52px] shadow-facilities bg-white">
+              <div className="relative overflow-hidden w-[88px] h-[88px]">
+                <Image src={"/assets/icon/icon-toilet.svg"} fill></Image>
+              </div>
+              <p className="font-medium text-[28px] text-[#191919]">Toilet</p>
+            </div>
+            <div className="h-[258px] flex flex-col justify-center items-center rounded-[40px] px-[150px] py-[52px] shadow-facilities bg-white">
+              <div className="relative overflow-hidden w-[88px] h-[88px]">
+                <Image src={"/assets/icon/icon-wifi.svg"} fill></Image>
+              </div>
+              <p className="font-medium text-[28px] text-[#191919]">Internet</p>
+            </div>
+            <div className="h-[258px] flex flex-col justify-center items-center rounded-[40px] px-[150px] py-[52px] shadow-facilities bg-white">
+              <div className="relative overflow-hidden w-[88px] h-[88px]">
+                <Image src={"/assets/icon/icon-food.svg"} fill></Image>
+              </div>
+              <p className="font-medium text-[28px] text-[#191919]">Cafe</p>
+            </div>
+            <div className="h-[258px] flex flex-col justify-center items-center rounded-[40px] px-[150px] py-[52px] shadow-facilities bg-white">
+              <div className="relative overflow-hidden w-[88px] h-[88px]">
+                <Image src={"/assets/icon/icon-ac.svg"} fill></Image>
+              </div>
+              <p className="font-medium text-[28px] text-[#191919]">
+                Air Conditioner
+              </p>
+            </div>
+            <div className="h-[258px] flex flex-col justify-center items-center rounded-[40px] px-[150px] py-[52px] shadow-facilities bg-white">
+              <div className="relative overflow-hidden w-[88px] h-[88px]">
+                <Image src={"/assets/icon/icon-pray.svg"} fill></Image>
+              </div>
+              <p className="font-medium text-[28px] text-[#191919]">
+                Multipurpose Room
+              </p>
+            </div>
+            <div className="h-[258px] flex flex-col justify-center items-center rounded-[40px] px-[150px] py-[52px] shadow-facilities bg-white">
+              <div className="relative overflow-hidden w-[88px] h-[88px]">
+                <Image src={"/assets/icon/icon-printer.svg"} fill></Image>
+              </div>
+              <p className="font-medium text-[28px] text-[#191919]">Printer</p>
+            </div>
+          </div>
+        </section>
+        <section className="bg-white px-10 py-[100px] justify-center flex text-center">
+          <div className="flex flex-col gap-y-[50px] w-[753px]">
+            <h1 className="font-normal text-[45px] text-[#191919]">
+              Nova Space really comfortable for working
+            </h1>
+            <p>
+              “Nova Space really comfortable for working. We've seen a huge jump
+              in leads since launch, and customers love the easy navigation.
+              Nova Space truly exceeded our expectations!"
+            </p>
+            <div className="profile-info flex flex-col justify-center items-center ">
+              <div className="flex gap-x-8 items-center">
+                <div className="w-[64px] h-[64px] opacity-35 overflow-hidden relative rounded-full">
+                  <Image
+                    src={"/assets/img/img-person1.svg"}
+                    fill
+                    className="absolute inset-0 object-center"
+                  ></Image>
+                </div>
+                <div className="w-[74px] h-[74px] opacity-75 overflow-hidden relative rounded-full">
+                  <Image
+                    src={"/assets/img/img-person1.svg"}
+                    fill
+                    className="absolute inset-0 object-center"
+                  ></Image>
+                </div>
+                <div className="w-[84px] h-[84px] overflow-hidden relative rounded-full">
+                  <Image
+                    src={"/assets/img/img-person1.svg"}
+                    fill
+                    className="absolute inset-0 object-center"
+                  ></Image>
+                </div>
+                <div className="w-[74px] h-[74px] opacity-75 overflow-hidden relative rounded-full">
+                  <Image
+                    src={"/assets/img/img-person1.svg"}
+                    fill
+                    className="absolute inset-0 object-center"
+                  ></Image>
+                </div>
+                <div className="w-[64px] h-[64px] opacity-35 overflow-hidden relative rounded-full">
+                  <Image
+                    src={"/assets/img/img-person1.svg"}
+                    fill
+                    className="absolute inset-0 object-center"
+                  ></Image>
+                </div>
+              </div>
+              <div className="profile-desc mt-[29px]">
+                <p className="font-medium text-xl capitalize text-black">
+                  Sarah Jones
+                </p>
+                <p className="font-normal text-xl capitalize text-[#AAAAAA]">
+                  Marketing Manager, Green Earth Solar
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="bg-white px-[100px] py-[100px] rounded-b-[60px]">
+          <div className="flex justify-between items-center">
+            <p className="font-normal w-[521px] leading-none text-[80px] text-[#191919] italic">Limited Spots Available!</p>
+            <button className="cursor-pointer p-5 h-fit w-fit rounded-full bg-[#191919] text-white font-normal text-xl">Reserve your Room</button>
+          </div>
         </section>
       </div>
     </>

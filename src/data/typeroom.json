@@ -1,0 +1,21 @@
+[{
+    "capasity":50,
+    "name1":"Gravity",
+    "name2":"pod",
+    "desc":"Soundproof pods for deep focus and virtual meetings.",
+    "image":"/assets/img/img-section1.svg"
+
+},
+{ "capasity":20,
+    "name1":"lunar",
+    "name2":"lounge",
+    "desc":"A relaxed setting for team meetings and creative brainstorming.",
+    "image":"/assets/img/img-section1.svg"
+},
+{ "capasity":10,
+    "name1":"CYBER",
+    "name2":"lab",
+    "desc":"A high-tech space for collaborative research and development.",
+    "image":"/assets/img/img-section1.svg"
+}
+]
