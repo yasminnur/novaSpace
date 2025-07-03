@@ -14,37 +14,38 @@ export default function Home() {
   }, []);
   return (
     <>
-      <div id="about" className="flex flex-col">
+      <div id="about" className="flex flex-col w-full">
         <section
           style={{
             backgroundImage: "url(/assets/img/img-section1.svg)",
-            backgroundPosition: "center",
+            backgroundPosition: "top",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="rounded-[45px] lg:rounded-[60px] flex flex-col justify-center items-center min-h-screen h-fit overflow-x-hidden py-[200px] px-[100px] lg:py-[283px] lg:px-[128px]"
+          className="relative rounded-[45px] lg:rounded-[60px] flex flex-col justify-center items-center min-h-screen h-fit overflow-x-hidden py-[200px] lg:py-[283px] "
         >
-          <div className="flex flex-col justify-center items-center text-white font-normal uppercase leading-none">
-            <h1 className="text-[80px] lg:text-[120px] font-[var(--font-inter)]">
+          <div className="absolute bg-gradient-to-t from-black/50 to-black/5 md:to-black/0 inset-0 w-full h-full"></div>
+          <div className="flex flex-col justify-center items-center text-white text-center font-normal uppercase leading-none min-w-min px-[100px] lg:px-[128px]">
+            <h1 className="text-[70px] lg:text-[120px] font-[var(--font-inter)]">
               Work
               <span className="italic font-[var(--font-serif)]">
                 {" "}
                 Smarter,{" "}
               </span>
             </h1>
-            <h1 className="lg:text-[120px]">
+            <h1 className="text-[70px] lg:text-[120px]">
               <span className="italic font-[Instrument Serif]">InNovate</span>{" "}
               faster
             </h1>
-            <p className="normal-case mt-10 text-lg">
+            <p className="normal-case mt-10 text-2xl">
               Where innovation meets collaboration in a futuristic space.
             </p>
           </div>
-          <div className="flex justify-center items-center text-white font-normal w-fill gap-x-[171px] mt-[250px]">
-            <h1 className="basis-1/3 text-[70px] italic leading-none">
+          <div className="flex flex-col md:flex-row justify-center items-center text-white font-normal w-full gap-y-4 gap-x-[171px] md:gap-x-[20px] mt-[250px] px-[40px] lg:px-[128px]">
+            <h1 className="basis-1/3 text-[35px] lg:text-[60px] italic leading-tight lg:leading-none text-start">
               Where Visionaries Create the Future
             </h1>
-            <p className="basis-2/3 text-2xl leading-loose">
+            <p className="basis-2/3 text-lg text-justify md:text-start md:text-lg xl:text-2xl leading-loose">
               Welcome to NovaSpace, a futuristic coworking space designed for
               creators, innovators, and dreamers. Our space blends cutting-edge
               design with a collaborative atmosphere, offering a seamless fusion
