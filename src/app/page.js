@@ -55,52 +55,55 @@ export default function Home() {
             </p>
           </div>
         </section>
+
+
         <section
           id="location"
-          className="mt-[30px] py-[100px] px-10 rounded-t-[60px] bg-white "
+          className="mt-[30px] py-[50px] md:py-[100px] px-5 md:px-10 rounded-t-[45px] lg:rounded-t-[60px] bg-white "
         >
-          <h1 className="text-center font-normal text-[45px] text-[#191919]">
+          <h1 className="text-center font-normal text-[35px] lg:text-[45px] text-[#191919]">
             Location
           </h1>
-          <div className="nav-location mt-[50px] text-[28px]">
-            <ul className="flex gap-x-5">
+          {/* nav-location */}
+          <div className="nav-location mt-[25px] md:mt-[50px] text-[20px] md:text-[28px]">
+            <ul className="flex flex-col md:flex-row gap-x-5 gap-y-3 md:gap-y-0">
               <li
-                className={`flex-1 text-center rounded-2xl text-white w-full py-5`}
+                className={`flex-1 text-center text-white w-full`}
               >
                 <button
                   onClick={() => setSelected("alpha")}
                   className={`flex-1 text-center rounded-2xl w-full py-5 ${
                     selected === "alpha"
                       ? "bg-[#191919] text-white font-medium"
-                      : "bg-[#F8F8F8] text-[#191919] font-normal"
+                      : "bg-[#F8F8F8] text-[#191919] hover:bg-[#191919]/75 hover:text-white font-normal"
                   }`}
                 >
                   Alpha District
                 </button>
               </li>
               <li
-                className={`flex-1 text-center rounded-2xl text-white w-full py-5`}
+                className={`flex-1 text-center rounded-2xl text-white w-full `}
               >
                 <button
                   onClick={() => setSelected("beta")}
                   className={`flex-1 text-center rounded-2xl w-full py-5 ${
                     selected === "beta"
                       ? "bg-[#191919] text-white font-medium"
-                      : "bg-[#F8F8F8] text-[#191919] font-normal"
+                      : "bg-[#F8F8F8] text-[#191919] hover:bg-[#191919]/75 hover:text-white font-normal"
                   }`}
                 >
                   Beta District
                 </button>
               </li>
               <li
-                className={`flex-1 text-center rounded-2xl text-white w-full py-5`}
+                className={`flex-1 text-center rounded-2xl text-white w-full`}
               >
                 <button
                   onClick={() => setSelected("omega")}
                   className={`flex-1 text-center rounded-2xl w-full py-5 ${
                     selected === "omega"
                       ? "bg-[#191919] text-white font-medium"
-                      : "bg-[#F8F8F8] text-[#191919] font-normal"
+                      : "bg-[#F8F8F8] text-[#191919] hover:bg-[#191919]/75 hover:text-white font-normal"
                   }`}
                 >
                   Omega District
@@ -108,8 +111,8 @@ export default function Home() {
               </li>
             </ul>
           </div>
-
-          <div className="relative h-[581px] w-full mt-[30px] rounded-[60px] overflow-hidden">
+          {/* image-location */}
+          <div className="relative h-[581px] w-full mt-[30px] rounded-[45px] lg:rounded-[60px] overflow-hidden">
             {selected === "alpha" && (
               <>
                 <Image
@@ -117,7 +120,7 @@ export default function Home() {
                   fill
                   className="absolute inset-0 object-cover w-full h-full"
                 ></Image>
-                <div className="desc-location text-base text-start font-normal text-[#191919] absolute z-20 left-10 top-10 p-[30px] bg-[#F8F8F8] h-[108px] w-[375px] rounded-3xl ">
+                <div className="desc-location text-base text-start font-normal text-[#191919] absolute z-20 left-5 top-5 right-5 md:left-10 md:right-10 md:top-10 p-[30px] bg-[#F8F8F8] h-[108px] md:w-[375px] rounded-3xl ">
                   <p className="truncate">📍 Futurix Tower, 15th Floor</p>
                   <p className="truncate">
                     Jl. Quantum Avenue No. 56, Alpha District
@@ -157,16 +160,18 @@ export default function Home() {
             )}
           </div>
         </section>
-        <section className="bg-white px-10 py-[100px]">
-          <h1 className="text-center font-normal text-[45px] text-[#191919]">
+
+
+        <section className="bg-white px-5 md:px-10 py-[50px] md:py-[100px]">
+          <h1 className="text-[35px] lg:text-[45px] text-center font-normal text-[#191919]">
             Room Type
           </h1>
-          <div className="flex flex-col gap-y-[50px] mt-[60px]">
+          <div className="flex flex-col gap-y-[50px] mt-[25px] md:mt-[60px]">
             {jsonData.map((item, index) => (
               <>
                 <div
                   key={index}
-                  className="room1 relative w-full h-[900px] overflow-hidden rounded-[60px]"
+                  className="room1 relative w-full h-[500px] md:h-[700px] lg:h-[900px] overflow-hidden rounded-[60px]"
                   style={{
                     backgroundImage: `url(${item.image})`,
                     backgroundSize: "cover",
@@ -175,13 +180,12 @@ export default function Home() {
                   }}
                 >
                   <div className="overlay inset-0 z-10 absolute w-full h-full bg-gradient-to-t from-black/75 to-black/0"></div>
-                  {/* <Image src={"/assets/img/img-section1.svg"} fill className="object-cover"></Image> */}
-                  <div className="absolute z-20 px-[88px] bottom-[131px] text-white flex w-full justify-between ">
-                    <div className="kiri flex flex-col gap-y-[10px] w-[615px]">
+                  <div className="absolute z-20 px-[34px] md:px-[88px] top-12 md:top-auto md:bottom-[131px] text-white flex flex-col md:flex-row w-full  justify-between">
+                    <div className="kiri flex flex-col gap-y-2 md:gap-y-[10px] md:w-[615px]">
                       <p className="px-5 py-2 rounded-full bg-white/40 w-fit">
                         {item.capasity} people
                       </p>
-                      <h1 className="italic text-[100px] uppercase font-[var(--font-serif)] leading-none">
+                      <h1 className="italic text-[45px] md:text-[100px] uppercase font-[var(--font-serif)] leading-none">
                         {item.name1}
                         <span className="font-[var(--font-inter)] not-italic">
                           {item.name2}
