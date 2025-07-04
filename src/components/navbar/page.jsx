@@ -20,8 +20,9 @@ export default function Navbar() {
               <Image
                 src={"/assets/img/img-logo.svg"}
                 fill
+                alt=""
                 className="absolute inset-0 object-contain"
-              ></Image>
+              />
             </div>
             <div className="text-white text-base font-normal">
               <ul className="hidden lg:flex gap-x-5">

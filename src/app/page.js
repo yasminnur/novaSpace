@@ -26,15 +26,15 @@ export default function Home() {
         >
           <div className="absolute bg-gradient-to-t from-black/50 to-black/5 md:to-black/0 inset-0 w-full h-full"></div>
           <div className="flex flex-col justify-center items-center text-white text-center font-normal uppercase leading-none min-w-min px-[100px] lg:px-[128px]">
-            <h1 className="text-[70px] lg:text-[120px] font-[var(--font-inter)]">
+            <h1 className="text-[70px] lg:text-[120px] ">
               Work
-              <span className="italic font-[var(--font-serif)]">
+              <span className="italic">
                 {" "}
                 Smarter,{" "}
               </span>
             </h1>
             <h1 className="text-[70px] lg:text-[120px]">
-              <span className="italic font-[Instrument Serif]">InNovate</span>{" "}
+              <span className="italic">InNovate</span>{" "}
               faster
             </h1>
             <p className="normal-case mt-10 text-2xl">
@@ -49,7 +49,7 @@ export default function Home() {
               Welcome to NovaSpace, a futuristic coworking space designed for
               creators, innovators, and dreamers. Our space blends cutting-edge
               design with a collaborative atmosphere, offering a seamless fusion
-              of technology,comfort, and inspiration. Whether you're a startup,
+              of technology,comfort, and inspiration. Whether you&apos;re a startup,
               freelancer, or remote team, NovaSpace provides the perfect
               environment to ignite ideas and shape the future.
             </p>
@@ -118,8 +118,9 @@ export default function Home() {
                 <Image
                   src={"/assets/img/img-section1.svg"}
                   fill
+                  alt=""
                   className="absolute inset-0 object-cover w-full h-full"
-                ></Image>
+                />
                 <div className="desc-location text-base text-start font-normal text-[#191919] absolute z-20 left-5 top-5 right-5 md:left-10 md:right-10 md:top-10 p-[30px] bg-[#F8F8F8] h-[108px] md:w-[375px] rounded-3xl ">
                   <p className="truncate">📍 Futurix Tower, 15th Floor</p>
                   <p className="truncate">
@@ -133,8 +134,9 @@ export default function Home() {
                 <Image
                   src={"/assets/img/img-section1.svg"}
                   fill
+                  alt=""
                   className="absolute inset-0 object-cover w-full h-full"
-                ></Image>
+                />
                 <div className="desc-location text-base text-start font-normal text-[#191919] absolute z-20 left-10 top-10 p-[30px] bg-[#F8F8F8] h-[108px] w-[375px] rounded-3xl ">
                   <p className="truncate">📍 Futurix Tower, 15th Floor</p>
                   <p className="truncate">
@@ -148,8 +150,9 @@ export default function Home() {
                 <Image
                   src={"/assets/img/img-section1.svg"}
                   fill
+                  alt=""
                   className="absolute inset-0 object-cover w-full h-full"
-                ></Image>
+                />
                 <div className="desc-location text-base text-start font-normal text-[#191919] absolute z-20 left-10 top-10 p-[30px] bg-[#F8F8F8] h-[108px] w-[375px] rounded-3xl ">
                   <p className="truncate">📍 Futurix Tower, 15th Floor</p>
                   <p className="truncate">
@@ -171,7 +174,7 @@ export default function Home() {
               <>
                 <div
                   key={index}
-                  className="room1 relative w-full h-[500px] md:h-[700px] lg:h-[900px] overflow-hidden rounded-[60px]"
+                  className="room1 relative w-full h-[500px] md:h-[700px] lg:h-[900px] overflow-hidden rounded-[45px] lg:rounded-[60px]"
                   style={{
                     backgroundImage: `url(${item.image})`,
                     backgroundSize: "cover",
@@ -180,18 +183,19 @@ export default function Home() {
                   }}
                 >
                   <div className="overlay inset-0 z-10 absolute w-full h-full bg-gradient-to-t from-black/75 to-black/0"></div>
-                  <div className="absolute z-20 px-[34px] md:px-[88px] top-12 md:top-auto md:bottom-[131px] text-white flex flex-col md:flex-row w-full  justify-between">
-                    <div className="kiri flex flex-col gap-y-2 md:gap-y-[10px] md:w-[615px]">
+                    <div className="absolute z-20 md:justify-end flex md:items-end px-[34px] md:px-[88px] py-[45px] md:py-[90px] h-full w-full">
+                  <div className="text-white flex flex-col md:flex-row justify-between w-full">
+                    <div className="kiri flex flex-col gap-y-5 md:gap-y-3 md:w-[615px]">
                       <p className="px-5 py-2 rounded-full bg-white/40 w-fit">
                         {item.capasity} people
                       </p>
-                      <h1 className="italic text-[45px] md:text-[100px] uppercase font-[var(--font-serif)] leading-none">
+                      <h1 className="italic truncate text-4xl md:text-[100px] uppercase leading-none">
                         {item.name1}
-                        <span className="font-[var(--font-inter)] not-italic">
+                        <span className=" not-italic">
                           {item.name2}
                         </span>
                       </h1>
-                      <p className="font-normal text-[25px] pr-[20px]">
+                      <p className="line-clamp-3 md:line-clamp-3 font-normal text-xl md:text-2xl">
                         {item.desc}
                       </p>
                     </div>
@@ -206,12 +210,14 @@ export default function Home() {
                         <div className="flex items-center justify-center rounded-full border w-[50px] h-[50px] border-white relative overflow-hidden bg-white/10">
                           <Image
                             src="/assets/icon/icon-arrow.svg"
-                            fill
+                              fill
+                              alt=""
                             className="p-3 group-hover:-rotate-[0.542rad]"
-                          ></Image>
+                          />
                         </div>
                       </div>
-                    </div>
+                      </div>
+                      </div>
                   </div>
                 </div>
               </>
@@ -225,13 +231,13 @@ export default function Home() {
           <div className="mt-[60px] grid grid-cols-3 gap-7">
             <div className="h-[258px] flex flex-col justify-center items-center rounded-[40px] px-[150px] py-[52px] shadow-facilities bg-white">
               <div className="relative overflow-hidden w-[88px] h-[88px]">
-                <Image src={"/assets/icon/icon-toilet.svg"} fill></Image>
+                <Image src={"/assets/icon/icon-toilet.svg"} fill alt=""/>
               </div>
               <p className="font-medium text-[28px] text-[#191919]">Toilet</p>
             </div>
             <div className="h-[258px] flex flex-col justify-center items-center rounded-[40px] px-[150px] py-[52px] shadow-facilities bg-white">
               <div className="relative overflow-hidden w-[88px] h-[88px]">
-                <Image src={"/assets/icon/icon-wifi.svg"} fill></Image>
+                <Image src={"/assets/icon/icon-wifi.svg"} fill alt=""/>
               </div>
               <p className="font-medium text-[28px] text-[#191919]">Internet</p>
             </div>
@@ -243,7 +249,7 @@ export default function Home() {
             </div>
             <div className="h-[258px] flex flex-col justify-center items-center rounded-[40px] px-[150px] py-[52px] shadow-facilities bg-white">
               <div className="relative overflow-hidden w-[88px] h-[88px]">
-                <Image src={"/assets/icon/icon-ac.svg"} fill></Image>
+                <Image src={"/assets/icon/icon-ac.svg"} fill alt=""/>
               </div>
               <p className="font-medium text-[28px] text-[#191919]">
                 Air Conditioner
@@ -251,7 +257,7 @@ export default function Home() {
             </div>
             <div className="h-[258px] flex flex-col justify-center items-center rounded-[40px] px-[150px] py-[52px] shadow-facilities bg-white">
               <div className="relative overflow-hidden w-[88px] h-[88px]">
-                <Image src={"/assets/icon/icon-pray.svg"} fill></Image>
+                <Image src={"/assets/icon/icon-pray.svg"} fill alt=""/>
               </div>
               <p className="font-medium text-[28px] text-[#191919]">
                 Multipurpose Room
@@ -259,7 +265,7 @@ export default function Home() {
             </div>
             <div className="h-[258px] flex flex-col justify-center items-center rounded-[40px] px-[150px] py-[52px] shadow-facilities bg-white">
               <div className="relative overflow-hidden w-[88px] h-[88px]">
-                <Image src={"/assets/icon/icon-printer.svg"} fill></Image>
+                <Image src={"/assets/icon/icon-printer.svg"} fill alt=""/>
               </div>
               <p className="font-medium text-[28px] text-[#191919]">Printer</p>
             </div>
@@ -271,7 +277,7 @@ export default function Home() {
               Nova Space really comfortable for working
             </h1>
             <p>
-              “Nova Space really comfortable for working. We've seen a huge jump
+              “Nova Space really comfortable for working. We&apos;ve seen a huge jump
               in leads since launch, and customers love the easy navigation.
               Nova Space truly exceeded our expectations!"
             </p>
@@ -281,36 +287,41 @@ export default function Home() {
                   <Image
                     src={"/assets/img/img-person1.svg"}
                     fill
+                    alt=""
                     className="absolute inset-0 object-center"
-                  ></Image>
+                  />
                 </div>
                 <div className="w-[74px] h-[74px] opacity-75 overflow-hidden relative rounded-full">
                   <Image
                     src={"/assets/img/img-person1.svg"}
                     fill
+                    alt=""
                     className="absolute inset-0 object-center"
-                  ></Image>
+                  />
                 </div>
                 <div className="w-[84px] h-[84px] overflow-hidden relative rounded-full">
                   <Image
                     src={"/assets/img/img-person1.svg"}
                     fill
+                    alt=""
                     className="absolute inset-0 object-center"
-                  ></Image>
+                  />
                 </div>
                 <div className="w-[74px] h-[74px] opacity-75 overflow-hidden relative rounded-full">
                   <Image
                     src={"/assets/img/img-person1.svg"}
                     fill
+                    alt=""
                     className="absolute inset-0 object-center"
-                  ></Image>
+                  />
                 </div>
                 <div className="w-[64px] h-[64px] opacity-35 overflow-hidden relative rounded-full">
                   <Image
                     src={"/assets/img/img-person1.svg"}
                     fill
+                    alt=""
                     className="absolute inset-0 object-center"
-                  ></Image>
+                  />
                 </div>
               </div>
               <div className="profile-desc mt-[29px]">

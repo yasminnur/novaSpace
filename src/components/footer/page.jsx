@@ -9,7 +9,8 @@ export default function Footer() {
               src={"/assets/img/img-logo.svg"}
               width={142}
               height={30}
-            ></Image>
+              alt=""
+            />
             <p className="font-medium text-[18px] underline text-white">
               +62 9809 0809
             </p>
@@ -21,22 +22,25 @@ export default function Footer() {
                 <Image
                   src={"/assets/icon/icon-framer.svg"}
                   fill
+                  alt=""
                   className="absolute flex items-center justify-center p-2"
-                ></Image>
+                />
               </div>
               <div className="bg-white rounded-full w-[40px] h-[40px] relative overflow-hidden border border-white">
                 <Image
                   src={"/assets/icon/icon-twitter.svg"}
                   fill
+                  alt=""
                   className="absolute flex items-center justify-center p-2"
-                ></Image>
+                />
               </div>
               <div className="bg-white rounded-full w-[40px] h-[40px] relative overflow-hidden border border-white">
                 <Image
                   src={"/assets/icon/icon-insta.svg"}
                   fill
+                  alt=""
                   className="absolute flex items-center justify-center p-2"
-                ></Image>
+                />
               </div>
             </div>
           </div>

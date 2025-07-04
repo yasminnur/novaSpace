@@ -1,11 +1,11 @@
 // import { Inter } from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/navbar/page";
-import { Inter, Instrument_Serif } from 'next/font/google';
+// import { Inter, Instrument_Serif } from 'next/font/google';
 import Footer from "@/components/footer/page";
 
-const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
-const serif = Instrument_Serif({ subsets: ['latin'], weight: '400', variable: '--font-instrument-serif' });
+// const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
+// const serif = Instrument_Serif({ subsets: ['latin'], weight: '400', variable: '--font-instrument-serif' });
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -16,7 +16,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <>
-      <html lang="en" className={`${inter.variable} ${serif.variable}`}>
+      {/* <html lang="en" className={`${inter.variable} ${serif.variable}`}> */}
+      <html lang="en">
         <body className="relative bg-primary px-5 lg:px-7 py-7 min-w-[360px] overflow-x-hidden">
             <Navbar />
             <div>
