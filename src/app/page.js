@@ -277,9 +277,9 @@ export default function Home() {
               Nova Space really comfortable for working
             </h1>
             <p>
-              “Nova Space really comfortable for working. We&apos;ve seen a huge jump
+            &quot;Nova Space really comfortable for working. We&apos;ve seen a huge jump
               in leads since launch, and customers love the easy navigation.
-              Nova Space truly exceeded our expectations!"
+              Nova Space truly exceeded our expectations!&quot;
             </p>
             <div className="profile-info flex flex-col justify-center items-center ">
               <div className="flex gap-x-8 items-center">
