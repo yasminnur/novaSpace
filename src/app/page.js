@@ -14,49 +14,67 @@ export default function Home() {
   }, []);
   return (
     <>
-      <div id="about" className="flex flex-col w-full">
-        <section
+      <div className="flex flex-col w-full">
+        <section 
           style={{
             backgroundImage: "url(/assets/img/img-section1.svg)",
             backgroundPosition: "top",
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="relative rounded-[45px] lg:rounded-[60px] flex flex-col justify-center items-center min-h-screen h-fit overflow-x-hidden py-[200px] lg:py-[283px] "
+          className="relative rounded-[45px] lg:rounded-[60px] flex flex-col justify-center items-center h-fit overflow-x-hidden"
         >
-          <div className="absolute bg-gradient-to-t from-black/50 to-black/5 md:to-black/0 inset-0 w-full h-full"></div>
-          <div className="flex flex-col justify-center items-center text-white text-center font-normal uppercase leading-none min-w-min px-[100px] lg:px-[128px]">
-            <h1 className="text-[70px] lg:text-[120px] ">
-              Work
-              <span className="italic">
-                {" "}
-                Smarter,{" "}
-              </span>
-            </h1>
-            <h1 className="text-[70px] lg:text-[120px]">
-              <span className="italic">InNovate</span>{" "}
-              faster
-            </h1>
-            <p className="normal-case mt-10 text-2xl">
-              Where innovation meets collaboration in a futuristic space.
-            </p>
-          </div>
-          <div className="flex flex-col md:flex-row justify-center items-center text-white font-normal w-full gap-y-4 gap-x-[171px] md:gap-x-[20px] mt-[250px] px-[40px] lg:px-[128px]">
-            <h1 className="basis-1/3 text-[35px] lg:text-[60px] italic leading-tight lg:leading-none text-start">
-              Where Visionaries Create the Future
-            </h1>
-            <p className="basis-2/3 text-lg text-justify md:text-start md:text-lg xl:text-2xl leading-loose">
-              Welcome to NovaSpace, a futuristic coworking space designed for
-              creators, innovators, and dreamers. Our space blends cutting-edge
-              design with a collaborative atmosphere, offering a seamless fusion
-              of technology,comfort, and inspiration. Whether you&apos;re a startup,
-              freelancer, or remote team, NovaSpace provides the perfect
-              environment to ignite ideas and shape the future.
-            </p>
+          <div className="absolute bg-gradient-to-t from-black/50 to-black/5 md:to-black/0 inset-0"></div>
+          <div className="relative z-10 flex justify-center items-center inset-0 flex-col py-[200px] lg:py-[310px] px-[100px] lg:px-[128px] h-fit">
+            <div className="flex flex-col justify-center items-center text-white text-center font-normal uppercase leading-none">
+              <h1 className="text-[70px] lg:text-[120px] ">
+                Work
+                <span className="italic"> Smarter, </span>
+              </h1>
+              <h1 className="text-[70px] lg:text-[120px]">
+                <span className="italic">InNovate</span> faster
+              </h1>
+              <p className="normal-case mt-10 text-2xl">
+                Where innovation meets collaboration in a futuristic space.
+              </p>
+            </div>
+            <div id="about" className="grid md:grid-cols-2 justify-center items-center text-white font-normal w-full gap-y-7 gap-x-[171px] md:gap-x-[20px] mt-[250px]  ">
+              <div className="flex flex-col justify-between h-full gap-y-4 md:gap-y-0">
+                <h1 className="text-[35px] lg:text-[60px] italic leading-tight lg:leading-none text-start">
+                  Where Visionaries Create the Future
+                </h1>
+                <Link
+                  href="/about"
+                  className="group flex items-center gap-x-5 w-fit"
+                >
+                  <p className="font-normal text-xl text-white group-hover:underline">
+                    Our Story
+                  </p>
+
+                  <div className="flex items-center justify-center rounded-full border w-[40px] h-[40px] md:w-[50px] md:h-[50px] border-white relative overflow-hidden bg-white/10">
+                    <Image
+                      src="/assets/icon/icon-arrow.svg"
+                      fill
+                      alt=""
+                      className="p-2 md:p-3 group-hover:-rotate-[0.542rad]"
+                    />
+                  </div>
+                </Link>
+              </div>
+              <p className="text-lg text-justify md:text-start md:text-lg xl:text-2xl leading-loose bg-">
+                Welcome to NovaSpace, a futuristic coworking space designed for
+                creators, innovators, and dreamers. Our space blends
+                cutting-edge design with a collaborative atmosphere, offering a
+                seamless fusion of technology,comfort, and inspiration. Whether
+                you&apos;re a startup, freelancer, or remote team, NovaSpace
+                provides the perfect environment to ignite ideas and shape the
+                future.
+              </p>
+            </div>
           </div>
         </section>
 
-
+        {/* Location  */}
         <section
           id="location"
           className="mt-[30px] py-[50px] md:py-[100px] px-5 md:px-10 rounded-t-[45px] lg:rounded-t-[60px] bg-white "
@@ -67,9 +85,7 @@ export default function Home() {
           {/* nav-location */}
           <div className="nav-location mt-[25px] md:mt-[50px] text-[20px] md:text-[28px]">
             <ul className="flex flex-col md:flex-row gap-x-5 gap-y-3 md:gap-y-0">
-              <li
-                className={`flex-1 text-center text-white w-full`}
-              >
+              <li className={`flex-1 text-center text-white w-full`}>
                 <button
                   onClick={() => setSelected("alpha")}
                   className={`flex-1 text-center rounded-2xl w-full py-5 ${
@@ -164,8 +180,11 @@ export default function Home() {
           </div>
         </section>
 
-
-        <section className="bg-white px-5 md:px-10 py-[50px] md:py-[100px]">
+        {/* Room Type  */}
+        <section
+          id="roomtype"
+          className="bg-white px-5 md:px-10 py-[50px] md:py-[100px]"
+        >
           <h1 className="text-[35px] lg:text-[45px] text-center font-normal text-[#191919]">
             Room Type
           </h1>
@@ -183,61 +202,73 @@ export default function Home() {
                   }}
                 >
                   <div className="overlay inset-0 z-10 absolute w-full h-full bg-gradient-to-t from-black/75 to-black/0"></div>
-                    <div className="absolute z-20 md:justify-end flex md:items-end px-[34px] md:px-[88px] py-[45px] md:py-[90px] h-full w-full">
-                  <div className="text-white flex flex-col md:flex-row justify-between w-full">
-                    <div className="kiri flex flex-col gap-y-5 md:gap-y-3 md:w-[615px]">
-                      <p className="px-5 py-2 rounded-full bg-white/40 w-fit">
-                        {item.capasity} people
-                      </p>
-                      <h1 className="italic truncate text-4xl md:text-[100px] uppercase leading-none">
-                        {item.name1}
-                        <span className=" not-italic">
-                          {item.name2}
-                        </span>
-                      </h1>
-                      <p className="line-clamp-3 md:line-clamp-3 font-normal text-xl md:text-2xl">
-                        {item.desc}
-                      </p>
-                    </div>
-                    <div className="kanan flex justify-end items-end">
-                      <div className="group flex items-center gap-x-5">
-                        <Link
-                          href="#"
-                          className="font-normal text-xl text-white group-hover:underline"
-                        >
-                          BOOK NOW
-                        </Link>
-                        <div className="flex items-center justify-center rounded-full border w-[50px] h-[50px] border-white relative overflow-hidden bg-white/10">
-                          <Image
-                            src="/assets/icon/icon-arrow.svg"
+                  <div className="absolute z-20 md:justify-end flex md:items-end px-[34px] md:px-[88px] py-[45px] md:py-[90px] h-full w-full">
+                    <div className="text-white flex flex-col md:flex-row justify-between w-full">
+                      <div className="kiri flex flex-col gap-y-5 md:gap-y-3 md:w-[615px]">
+                        <p className="px-5 py-2 rounded-full bg-white/40 w-fit">
+                          {item.capasity} people
+                        </p>
+                        <h1 className="italic truncate text-4xl md:text-[100px] uppercase leading-none">
+                          {item.name1}
+                          <span className=" not-italic">{item.name2}</span>
+                        </h1>
+                        <p className="line-clamp-3 md:line-clamp-3 font-normal text-xl md:text-2xl">
+                          {item.desc}
+                        </p>
+                      </div>
+                      <div className="kanan flex justify-end items-end">
+                        <div className="group flex items-center gap-x-5">
+                          <Link
+                            href="#"
+                            className="font-normal text-xl text-white group-hover:underline"
+                          >
+                            BOOK NOW
+                          </Link>
+                          <div className="flex items-center justify-center rounded-full border w-[50px] h-[50px] border-white relative overflow-hidden bg-white/10">
+                            <Image
+                              src="/assets/icon/icon-arrow.svg"
                               fill
                               alt=""
-                            className="p-3 group-hover:-rotate-[0.542rad]"
-                          />
+                              className="p-3 group-hover:-rotate-[0.542rad]"
+                            />
+                          </div>
                         </div>
                       </div>
-                      </div>
-                      </div>
+                    </div>
                   </div>
                 </div>
               </>
             ))}
           </div>
+
+          <div className="btn-more w-full flex justify-center items-center mt-[25px] md:mt-[60px]">
+            <Link href="/roomtype" className="font-medium px-6 py-3 bg-black text-white border border-black rounded-full text-2xl hover:bg-transparent hover:text-black">
+              See More...
+            </Link>
+          </div>
         </section>
-        <section className="bg-white px-10 py-[100px]">
-          <h1 className="text-center font-normal text-[45px] text-[#191919]">
+
+        {/* Facilities  */}
+        <section
+          id="facilities"
+          className="bg-white px-5 md:px-10 py-[50px] md:py-[100px]"
+        >
+          <h1 className="text-[35px] lg:text-[45px] text-center font-normal text-[#191919]">
             Facilities
           </h1>
-          <div className="mt-[60px] grid grid-cols-3 gap-7">
-            <div className="h-[258px] flex flex-col justify-center items-center rounded-[40px] px-[150px] py-[52px] shadow-facilities bg-white">
-              <div className="relative overflow-hidden w-[88px] h-[88px]">
-                <Image src={"/assets/icon/icon-toilet.svg"} fill alt=""/>
+          <div className="mt-[60px] grid grid-cols-1 md:grid-cols-3 gap-7 bg-green-300">
+            <div className="bg-amber-200 h-[258px] flex flex-col justify-center items-center rounded-[40px] md:px-[150px] md:py-[52px] shadow-facilities">
+              <div className="bg-red-300 relative overflow-hidden w-[88px] h-[88px]">
+                <Image src={"/assets/icon/icon-toilet.svg"} fill alt="" />
               </div>
-              <p className="font-medium text-[28px] text-[#191919]">Toilet</p>
+              <p className="font-medium text-[28px] w-fit text-[#191919] bg-green-700">
+                Toilet
+              </p>
             </div>
+
             <div className="h-[258px] flex flex-col justify-center items-center rounded-[40px] px-[150px] py-[52px] shadow-facilities bg-white">
               <div className="relative overflow-hidden w-[88px] h-[88px]">
-                <Image src={"/assets/icon/icon-wifi.svg"} fill alt=""/>
+                <Image src={"/assets/icon/icon-wifi.svg"} fill alt="" />
               </div>
               <p className="font-medium text-[28px] text-[#191919]">Internet</p>
             </div>
@@ -249,7 +280,7 @@ export default function Home() {
             </div>
             <div className="h-[258px] flex flex-col justify-center items-center rounded-[40px] px-[150px] py-[52px] shadow-facilities bg-white">
               <div className="relative overflow-hidden w-[88px] h-[88px]">
-                <Image src={"/assets/icon/icon-ac.svg"} fill alt=""/>
+                <Image src={"/assets/icon/icon-ac.svg"} fill alt="" />
               </div>
               <p className="font-medium text-[28px] text-[#191919]">
                 Air Conditioner
@@ -257,7 +288,7 @@ export default function Home() {
             </div>
             <div className="h-[258px] flex flex-col justify-center items-center rounded-[40px] px-[150px] py-[52px] shadow-facilities bg-white">
               <div className="relative overflow-hidden w-[88px] h-[88px]">
-                <Image src={"/assets/icon/icon-pray.svg"} fill alt=""/>
+                <Image src={"/assets/icon/icon-pray.svg"} fill alt="" />
               </div>
               <p className="font-medium text-[28px] text-[#191919]">
                 Multipurpose Room
@@ -265,21 +296,26 @@ export default function Home() {
             </div>
             <div className="h-[258px] flex flex-col justify-center items-center rounded-[40px] px-[150px] py-[52px] shadow-facilities bg-white">
               <div className="relative overflow-hidden w-[88px] h-[88px]">
-                <Image src={"/assets/icon/icon-printer.svg"} fill alt=""/>
+                <Image src={"/assets/icon/icon-printer.svg"} fill alt="" />
               </div>
               <p className="font-medium text-[28px] text-[#191919]">Printer</p>
             </div>
           </div>
         </section>
-        <section className="bg-white px-10 py-[100px] justify-center flex text-center">
+
+        {/* Testi  */}
+        <section
+          id="testi"
+          className="bg-white px-10 py-[100px] justify-center flex text-center"
+        >
           <div className="flex flex-col gap-y-[50px] w-[753px]">
             <h1 className="font-normal text-[45px] text-[#191919]">
               Nova Space really comfortable for working
             </h1>
             <p>
-            &quot;Nova Space really comfortable for working. We&apos;ve seen a huge jump
-              in leads since launch, and customers love the easy navigation.
-              Nova Space truly exceeded our expectations!&quot;
+              &quot;Nova Space really comfortable for working. We&apos;ve seen a
+              huge jump in leads since launch, and customers love the easy
+              navigation. Nova Space truly exceeded our expectations!&quot;
             </p>
             <div className="profile-info flex flex-col justify-center items-center ">
               <div className="flex gap-x-8 items-center">
@@ -335,10 +371,15 @@ export default function Home() {
             </div>
           </div>
         </section>
+
         <section className="bg-white px-[100px] py-[100px] rounded-b-[60px]">
           <div className="flex justify-between items-center">
-            <p className="font-normal w-[521px] leading-none text-[80px] text-[#191919] italic">Limited Spots Available!</p>
-            <button className="cursor-pointer p-5 h-fit w-fit rounded-full bg-[#191919] text-white font-normal text-xl">Reserve your Room</button>
+            <p className="font-normal w-[521px] leading-none text-[80px] text-[#191919] italic">
+              Limited Spots Available!
+            </p>
+            <button className="cursor-pointer p-5 h-fit w-fit rounded-full bg-[#191919] text-white font-normal text-xl">
+              Reserve your Room
+            </button>
           </div>
         </section>
       </div>

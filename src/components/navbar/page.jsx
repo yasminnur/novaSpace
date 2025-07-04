@@ -11,7 +11,7 @@ export default function Navbar() {
     <>
       <div className="w-full flex justify-center">
         <nav
-          className={`fixed h-fit left-10 right-10 lg:left-12 lg:right-12 z-50 top-10 flex flex-col lg:flex-row justify-between bg-primary items-center py-5 transition-transform duration-1000 ${
+          className={`fixed h-fit left-10 right-10 lg:left-16 lg:right-16 z-50 top-10 flex flex-col lg:flex-row justify-between bg-primary items-center py-5 transition-transform duration-1000 ${
             navDropdown ? "rounded-[40px]" : "rounded-full"
           }`}
         >
@@ -47,7 +47,7 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li className="relative group overflow-hidden px-4 py-2 w-[90px] h-[40px] rounded-full hover:bg-white/5 transition duration-600 cursor-pointer">
-                  <Link href="#room">
+                  <Link href="#roomtype">
                     <p className="absolute inset-0 flex items-center justify-center transition-all duration-500 ease-in-out group-hover:opacity-0 group-hover:-translate-y-full">
                       Room
                     </p>
