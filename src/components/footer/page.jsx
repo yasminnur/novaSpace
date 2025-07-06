@@ -48,11 +48,11 @@ export default function Footer() {
             <div className="w-[200px]">
               <p className="font-medium text-base uppercase mb-5">pages</p>
               <ul className="flex flex-col gap-y-[10px] font-normal text-base text-white/60">
-                <li>Home</li>
-                <li>Location</li>
-                <li>Room Type</li>
-                <li>Facilities</li>
-                <li>Contact</li>
+                <li className="cursor-pointer">Home</li>
+                <li className="cursor-pointer">Location</li>
+                <li className="cursor-pointer">Room Type</li>
+                <li className="cursor-pointer">Facilities</li>
+                <li className="cursor-pointer">Contact</li>
               </ul>
             </div>
             <div className="">
@@ -60,8 +60,8 @@ export default function Footer() {
                 UTILITY Pages
               </p>
               <ul className="flex flex-col gap-y-[10px] font-normal text-base text-white/60">
-                <li>404</li>
-                <li>Licensing</li>
+                <li className="cursor-pointer">404</li>
+                <li className="cursor-pointer">Licensing</li>
               </ul>
             </div>
                   </div>

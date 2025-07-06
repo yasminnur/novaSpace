@@ -16,6 +16,7 @@ export default function Navbar() {
           }`}
         >
           <div className="flex px-6 w-full justify-between items-center">
+            <Link href="/">
             <div className="w-[120px] h-[30px] overflow-hidden relative cursor-pointer">
               <Image
                 src={"/assets/img/img-logo.svg"}
@@ -23,7 +24,8 @@ export default function Navbar() {
                 alt=""
                 className="absolute inset-0 object-contain"
               />
-            </div>
+              </div>
+              </Link>
             <div className="text-white text-base font-normal">
               <ul className="hidden lg:flex gap-x-5">
                 <li className="relative group overflow-hidden w-[90px] h-[40px] rounded-full hover:bg-white/5 transition-all duration-500 cursor-pointer">

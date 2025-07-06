@@ -21,15 +21,15 @@ export default function Booking() {
             </div>
             
             <section className="flex bg-white mt-[30px] py-[50px] px-5 md:px-10 rounded-[45px] lg:rounded-[60px] gap-x-10">
-                <div className="basis-1/3 bg-red-300 w-full">
-                    <div className="image-container relative overflow-hidden h-[250px] bg-green-300">
+                <div className="basis-1/3 w-full">
+                    <div className="image-container relative overflow-hidden h-[250px] ">
                         <Image src={"/assets/img/img-section1.svg"} alt="" fill className="inset-0 object-cover object-center"/>
                     </div>
                     <div className="room-desc">
                         dd
                     </div>
                 </div>
-                <div className="basis-2/3 bg-red-500 w-full">
+                <div className="basis-2/3 w-full">
                     <form action="" className="flex flex-col gap-y-6">
                         <div className="form-nama flex flex-col">
                             Name

@@ -208,7 +208,7 @@ export default function Home() {
                         <p className="px-5 py-2 rounded-full bg-white/40 w-fit">
                           {item.capasity} people
                         </p>
-                        <h1 className="italic truncate text-4xl md:text-[100px] uppercase leading-none">
+                        <h1 className="italic text-4xl md:text-[100px] uppercase leading-none">
                           {item.name1}
                           <span className=" not-italic">{item.name2}</span>
                         </h1>
@@ -219,7 +219,7 @@ export default function Home() {
                       <div className="kanan flex justify-end items-end">
                         <div className="group flex items-center gap-x-5">
                           <Link
-                            href="#"
+                            href="/booking"
                             className="font-normal text-xl text-white group-hover:underline"
                           >
                             BOOK NOW
@@ -256,12 +256,12 @@ export default function Home() {
           <h1 className="text-[35px] lg:text-[45px] text-center font-normal text-[#191919]">
             Facilities
           </h1>
-          <div className="mt-[60px] grid grid-cols-1 md:grid-cols-3 gap-7 bg-green-300">
-            <div className="bg-amber-200 h-[258px] flex flex-col justify-center items-center rounded-[40px] md:px-[150px] md:py-[52px] shadow-facilities">
-              <div className="bg-red-300 relative overflow-hidden w-[88px] h-[88px]">
+          <div className="mt-[60px] grid grid-cols-1 md:grid-cols-3 gap-7 ">
+            <div className="h-[258px] flex flex-col justify-center items-center rounded-[40px] md:px-[150px] md:py-[52px] shadow-facilities">
+              <div className=" relative overflow-hidden w-[88px] h-[88px]">
                 <Image src={"/assets/icon/icon-toilet.svg"} fill alt="" />
               </div>
-              <p className="font-medium text-[28px] w-fit text-[#191919] bg-green-700">
+              <p className="font-medium text-[28px] w-fit text-[#191919] text-center">
                 Toilet
               </p>
             </div>
@@ -270,19 +270,19 @@ export default function Home() {
               <div className="relative overflow-hidden w-[88px] h-[88px]">
                 <Image src={"/assets/icon/icon-wifi.svg"} fill alt="" />
               </div>
-              <p className="font-medium text-[28px] text-[#191919]">Internet</p>
+              <p className="font-medium text-[28px] text-[#191919] text-center">Internet</p>
             </div>
             <div className="h-[258px] flex flex-col justify-center items-center rounded-[40px] px-[150px] py-[52px] shadow-facilities bg-white">
               <div className="relative overflow-hidden w-[88px] h-[88px]">
                 <Image src={"/assets/icon/icon-food.svg"} fill></Image>
               </div>
-              <p className="font-medium text-[28px] text-[#191919]">Cafe</p>
+              <p className="font-medium text-[28px] text-[#191919] text-center">Cafe</p>
             </div>
             <div className="h-[258px] flex flex-col justify-center items-center rounded-[40px] px-[150px] py-[52px] shadow-facilities bg-white">
               <div className="relative overflow-hidden w-[88px] h-[88px]">
                 <Image src={"/assets/icon/icon-ac.svg"} fill alt="" />
               </div>
-              <p className="font-medium text-[28px] text-[#191919]">
+              <p className="font-medium text-[28px] text-[#191919] text-center">
                 Air Conditioner
               </p>
             </div>
@@ -290,7 +290,7 @@ export default function Home() {
               <div className="relative overflow-hidden w-[88px] h-[88px]">
                 <Image src={"/assets/icon/icon-pray.svg"} fill alt="" />
               </div>
-              <p className="font-medium text-[28px] text-[#191919]">
+              <p className="font-medium text-[28px] text-[#191919] text-center">
                 Multipurpose Room
               </p>
             </div>
@@ -298,7 +298,7 @@ export default function Home() {
               <div className="relative overflow-hidden w-[88px] h-[88px]">
                 <Image src={"/assets/icon/icon-printer.svg"} fill alt="" />
               </div>
-              <p className="font-medium text-[28px] text-[#191919]">Printer</p>
+              <p className="font-medium text-[28px] text-[#191919] text-center">Printer</p>
             </div>
           </div>
         </section>
@@ -306,7 +306,7 @@ export default function Home() {
         {/* Testi  */}
         <section
           id="testi"
-          className="bg-white px-10 py-[100px] justify-center flex text-center w-full max-w-[1400px] mx-auto px-4"
+          className="bg-white py-[100px] justify-center flex text-center w-full max-w-[1400px] mx-auto px-4"
         >
           <div className="flex flex-col gap-y-[50px] w-[753px]">
             <h1 className="font-normal text-[45px] text-[#191919]">
