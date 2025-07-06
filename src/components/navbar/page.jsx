@@ -67,7 +67,7 @@ export default function Navbar() {
                   </Link>
                 </li>
                 <li className="flex justify-center items-center border border-black hover:border-white bg-white hover:bg-transparent hover:text-white  px-4 h-[40px] text-black font-medium/[24px] rounded-full">
-                  <Link href="#">Booking Now</Link>
+                  <Link href="/booking">Booking Now</Link>
                 </li>
               </ul>
               {/* hamburger */}
@@ -110,7 +110,7 @@ export default function Navbar() {
                 </li>
 
                 <li className="flex mx-6 my-3 py-2 justify-center items-center border border-black hover:border-white bg-white hover:bg-transparent text-black hover:text-white font-medium rounded-full cursor-pointer">
-                  <Link href="#">Booking Now</Link>
+                  <Link href="/booking">Booking Now</Link>
                 </li>
               </ul>
             </>

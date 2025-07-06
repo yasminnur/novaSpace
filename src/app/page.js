@@ -2,11 +2,11 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
-import { usePathname } from "next/navigation";
+// import { usePathname } from "next/navigation";
 import typeroomData from "@/data/typeroom.json";
 // import Navbar from "@/components/navbar/page";
 export default function Home() {
-  const pathname = usePathname();
+  // const pathname = usePathname();
   const [selected, setSelected] = useState("alpha");
   const [jsonData, setJsonData] = useState([]);
   useEffect(() => {
@@ -22,7 +22,7 @@ export default function Home() {
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
           }}
-          className="relative rounded-[45px] lg:rounded-[60px] flex flex-col justify-center items-center h-fit overflow-x-hidden"
+          className="relative rounded-[45px] lg:rounded-[60px] flex flex-col justify-center items-center h-fit w-full max-w-[1400px] mx-auto px-5 overflow-x-hidden"
         >
           <div className="absolute bg-gradient-to-t from-black/50 to-black/5 md:to-black/0 inset-0"></div>
           <div className="relative z-10 flex justify-center items-center inset-0 flex-col py-[200px] lg:py-[310px] px-[100px] lg:px-[128px] h-fit">
@@ -77,7 +77,7 @@ export default function Home() {
         {/* Location  */}
         <section
           id="location"
-          className="mt-[30px] py-[50px] md:py-[100px] px-5 md:px-10 rounded-t-[45px] lg:rounded-t-[60px] bg-white "
+          className="mt-[30px] py-[50px] md:py-[100px] px-5 md:px-10 rounded-t-[45px] lg:rounded-t-[60px] bg-white w-full max-w-[1400px] mx-auto"
         >
           <h1 className="text-center font-normal text-[35px] lg:text-[45px] text-[#191919]">
             Location
@@ -183,13 +183,13 @@ export default function Home() {
         {/* Room Type  */}
         <section
           id="roomtype"
-          className="bg-white px-5 md:px-10 py-[50px] md:py-[100px]"
+          className="bg-white px-5 md:px-10 py-[50px] md:py-[100px] w-full max-w-[1400px] mx-auto"
         >
           <h1 className="text-[35px] lg:text-[45px] text-center font-normal text-[#191919]">
             Room Type
           </h1>
           <div className="flex flex-col gap-y-[50px] mt-[25px] md:mt-[60px]">
-            {jsonData.map((item, index) => (
+            {jsonData.slice(0,3).map((item, index) => (
               <>
                 <div
                   key={index}
@@ -242,8 +242,8 @@ export default function Home() {
           </div>
 
           <div className="btn-more w-full flex justify-center items-center mt-[25px] md:mt-[60px]">
-            <Link href="/roomtype" className="font-medium px-6 py-3 bg-black text-white border border-black rounded-full text-2xl hover:bg-transparent hover:text-black">
-              See More...
+            <Link href="/roomtype" className="font-medium px-9 py-4 bg-black text-white border border-black rounded-full text-2xl hover:bg-transparent hover:text-black">
+              See More
             </Link>
           </div>
         </section>
@@ -251,7 +251,7 @@ export default function Home() {
         {/* Facilities  */}
         <section
           id="facilities"
-          className="bg-white px-5 md:px-10 py-[50px] md:py-[100px]"
+          className="bg-white px-5 md:px-10 py-[50px] md:py-[100px] w-full max-w-[1400px] mx-auto"
         >
           <h1 className="text-[35px] lg:text-[45px] text-center font-normal text-[#191919]">
             Facilities
@@ -306,7 +306,7 @@ export default function Home() {
         {/* Testi  */}
         <section
           id="testi"
-          className="bg-white px-10 py-[100px] justify-center flex text-center"
+          className="bg-white px-10 py-[100px] justify-center flex text-center w-full max-w-[1400px] mx-auto px-4"
         >
           <div className="flex flex-col gap-y-[50px] w-[753px]">
             <h1 className="font-normal text-[45px] text-[#191919]">
@@ -372,7 +372,7 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="bg-white px-[100px] py-[100px] rounded-b-[60px]">
+        <section className="bg-white px-[100px] py-[100px] rounded-b-[60px] w-full max-w-[1400px] mx-auto">
           <div className="flex justify-between items-center">
             <p className="font-normal w-[521px] leading-none text-[80px] text-[#191919] italic">
               Limited Spots Available!

@@ -17,5 +17,35 @@
     "name2":"lab",
     "desc":"A high-tech space for collaborative research and development.",
     "image":"/assets/img/img-section1.svg"
+},
+{ "capasity":10,
+    "name1":"CYBER",
+    "name2":"lab",
+    "desc":"A high-tech space for collaborative research and development.",
+    "image":"/assets/img/img-section1.svg"
+},
+{ "capasity":10,
+    "name1":"CYBER",
+    "name2":"lab",
+    "desc":"A high-tech space for collaborative research and development.",
+    "image":"/assets/img/img-section1.svg"
+},
+{ "capasity":10,
+    "name1":"CYBER",
+    "name2":"lab",
+    "desc":"A high-tech space for collaborative research and development.",
+    "image":"/assets/img/img-section1.svg"
+},
+{ "capasity":10,
+    "name1":"CYBER",
+    "name2":"lab",
+    "desc":"A high-tech space for collaborative research and development.",
+    "image":"/assets/img/img-section1.svg"
+},
+{ "capasity":10,
+    "name1":"CYBER",
+    "name2":"lab",
+    "desc":"A high-tech space for collaborative research and development.",
+    "image":"/assets/img/img-section1.svg"
 }
 ]

@@ -12,9 +12,9 @@ export default function RootLayout({ children }) {
   return (
     <>
       <html lang="en">
-        <body className="relative bg-primary px-5 lg:px-7 py-7 min-w-[360px] overflow-x-hidden">
+        <body className="relative  bg-primary px-5 lg:px-7 py-7 min-w-[360px] overflow-x-hidden">
             <Navbar />
-            <div>
+            <div className="">
               {children}
           </div>
           <Footer/>
